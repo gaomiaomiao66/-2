@@ -890,7 +890,7 @@ section{
 				    width: 225px;
 				    height: 64px;
 				    border: 0;
-				    background-color: #612d1d;
+				    background-color: #ffcd8d;
 				    opacity: 0.8;
 				    text-align: center;
 				    color: #fff;
@@ -937,6 +937,10 @@ section{
 						    img{
 						    	width: 220px;
 						    	height: 240px;
+						    	transition: all .5s;
+							    &:hover{
+							    	transform: scale(1.1, 1.1);
+							    }
 						    }
 				    	}
 				    	.product-title{
@@ -1035,12 +1039,12 @@ section{
 					display: block;
 					width: 16px;
 					height: 16px;
-					background: url(../images/common_z.png) no-repeat -390px -318px;
+					background: url(../images/server_z.png) no-repeat -390px -318px;
 					float: right;
 				}
 			}
 			.gray-l-list{
-				padding: 15px 15px 20px;
+				padding: 15px 9px 20px;
 				background: #f2f2f2;
 				height: 225px;
 				.gray-list{

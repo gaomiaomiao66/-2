@@ -43,8 +43,8 @@
     });
 
 
- // 搜索框
-
+ 
+// 在新品上线添加鼠标进入事件
 
 $(function(){
 
@@ -54,4 +54,15 @@ $(function(){
      $('.product-list li').mouseout(function(){
          $(this).css('border','');
     })
+})
+
+
+// 搜索框获取后台数据
+
+// 顶部的广告
+$(function(){
+    setTimeout(function(){
+        $('.home-banner').css('display','none')
+
+      },5000)
 })
