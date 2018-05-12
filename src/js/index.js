@@ -66,3 +66,57 @@ $(function(){
 
       },5000)
 })
+
+// 方向检测
+// $(function($){
+//     var Tab = function(tab){
+//             $(this).bind('mouseenter mouseleave',function(e){
+//             var w = $(this).width();
+//             var h = $(this).height();
+//             var x = (e.pageX - this.offsetLeft - (w / 2)) * (w > h ? (h / w) : 1);
+//             var y = (e.pageY - this.offsetTop - (h / 2)) * (h > w ? (w / h) : 1);
+//             var direction = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4;
+
+//             if(e.type === 'mouseenter') {
+//                     var startPos = {left: 0, top: 0};
+//                     switch(direction) {
+//                         case 0:
+//                             startPos = {left: 0, top: -h};
+//                             break;
+//                         case 1:
+//                             startPos = {left: w, top: 0};
+//                             break;
+//                         case 2:
+//                             startPos = {left: 0, top: h};
+//                             break;
+//                         case 3:
+//                             startPos = {left: -w, top: 0};
+//                             break;
+//                     }
+
+//                     $('.shadow').css(startPos).stop(true).animate({left: 0, top: 0});
+//                 } else if(e.type === 'mouseleave') {
+//                     var endPos = {left: 0, top: 0};
+//                     switch(direction) {
+//                         case 0:
+//                             endPos = {left: 0, top: -h};
+//                             break;
+//                         case 1:
+//                             endPos = {left: w, top: 0};
+//                             break;
+//                         case 2:
+//                             endPos = {left: 0, top: h};
+//                             break;
+//                         case 3:
+//                             endPos = {left: -w, top: 0};
+//                             break;
+//                     }
+
+//                     $('.shadow').stop(true).animate(endPos);
+//                 }
+
+//            });
+//         }  
+//     }
+       
+// });
