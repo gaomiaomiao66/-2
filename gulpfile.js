@@ -14,6 +14,8 @@ var sass = require('gulp-ruby-sass');
 var imagemin = require('gulp-imagemin');
 /*-------引入压缩html插件------*/
 var htmlmin = require('gulp-htmlmin');
+// es6转换es5
+var babel = require('gulp-babel');
 /*---压缩css---*/
 // gulp.task('minifyCss', function () {
 // 	/*---指定操作的文件/压缩/存储路径---*/
@@ -28,7 +30,12 @@ gulp.task('sass', function () {
 /*---压缩js---*/
 gulp.task('minifyJs', function () {
 	// gulp.src('./src/js/*.js').pipe(uglify()).pipe(gulp.dest('./dist/js/'));
-	gulp.src('./src/js/*.js').pipe(uglify()).pipe(gulp.dest('./dist/js/'));
+	return gulp.src('./src/js/*.js')
+	.pipe(babel({
+		presets: ['es2015']
+	}))
+	.pipe(uglify())
+	.pipe(gulp.dest('./dist/js/'));
 });
 /*---压缩image---*/
 gulp.task('minifyImg', function () {
