@@ -57,66 +57,7 @@ $(function(){
 })
 
 
-// 搜索框获取后台数据
-    var placehold = document.getElementById('placehold');
-    
-    var ssUo = document.getElementById('ss_uo');
 
-function place(placehold) {
-        var notice = ['爱情鲜花', '友情鲜花', '商务花', '生日鲜花','玫瑰','郁金香'];
-        // 显示默认值
-        var index = 0;
-        placehold.value = notice[index];
-        var timer = null;
-
-        autoMove();
-
-        function autoMove() {
-            if(placehold.value === '' || placehold.value === notice[index]) {
-                timer = setInterval(function () {
-                    index++;
-                    if(index >= notice.length) {
-                        index = 0;
-                    }
-                    placehold.value = notice[index];
-                }, 3000);
-            }
-        }
-
-        placehold.onfocus = function () {
-            clearInterval(timer);
-            if(this.value === notice[index]) {
-                this.value = '';
-            }
-            ssUo.style.display='block';
-        };
-
-        placehold.onblur = function () {
-            autoMove();
-            if(this.value === '') {
-                this.value = notice[index];
-            }
-            ssUo.style.display='none';
-        }
-    };
-
-    place(placehold);
-
-function callback(data) {
-            ssUo.innerHTML = '';
-            data.result.forEach( v => {
-                var newLi = document.createElement('li');
-                newLi.innerHTML = v[0];
-                ssUo.append(newLi);
-            });
-        }
-        placehold.oninput = function () {
-            // 创建script标签
-            var script = document.createElement('script');
-
-            script.src = 'https://suggest.taobao.com/sug?code=utf-8&q='+ this.value +'&_ksTS=1524750507019_398&callback=callback';
-            document.body.appendChild(script);
-        };
   
 // 顶部的广告
 $(function(){

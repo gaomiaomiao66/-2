@@ -136,12 +136,14 @@ $width: 100%;
 			border-bottom: none;
 			width: 70px;
 			display: block;
+			
 		}
 		.service-list{
 			position: absolute;
 			border: 1px solid #d9d9d9;
 			border-top: none;
 			display: none;
+			z-index:9999;
 			a{
 				display: block;
 				width: 66px;
@@ -266,7 +268,6 @@ header{
 					z-index: 9999;
 					cursor: pointer;
 					background: #fff;
-					height: 10px;
 					width: 313px;
 					li{
 						text-indent: 10px;
@@ -1533,6 +1534,134 @@ footer{
 			}
 			.link-end{
 				margin-right: 0;
+			}
+		}
+	}
+}
+// 右侧固定的侧边栏
+.right-fixed{
+	.fix{
+		width: 34px;
+		height: 100%;
+		background: rgba(0, 0, 0, .7);
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 10;
+		a{
+			font-size: 12px;
+		    position: relative;
+		    z-index: 1;
+		    top: 0;
+		    left: 0;
+		    display: block;
+		    overflow: hidden;
+		    width: 36px;
+		    height: 36px;
+		    margin: 0;
+		    padding: 0;
+		    text-decoration: none;
+		    color: #d8d8d8;
+		    &:hover{
+		    	background: #ff6a00;
+		    }
+		}
+		span{
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 36px;
+			height: 36px;
+			vertical-align: top;
+		}
+		.fix-up{
+			position: absolute;
+			top: 50%;
+			left: 0;
+			margin-top: -190px;
+			width: 34px;
+			li{
+				position: relative;
+				top: 0;
+				padding: 0;
+				display: block;
+				margin-top: 10px;
+			}
+			
+			.my_qlink{
+				span{
+					background: url(../images/ibar_sprites.png) no-repeat;
+				}
+			}
+			.shopCart{
+				position: relative;
+				top: 0;
+				left: 0;
+				margin-top: 10px;
+				a{
+					line-height: 16px;
+					color: #fff;
+					height: 133px;
+					margin: 10px 0;
+					background: url(../images/ibar_sprites.png) no-repeat -36px -216px;
+					.shop-u{
+						display: inline-block;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 36px;
+						height: 36px;
+						vertical-align: top;
+						background: url(../images/ibar_sprites.png) no-repeat 0px -36px;
+					}
+					.shop_letter{
+						display: block;
+						width: 16px;
+						height: 48px;
+						margin: 38px 0 0 13px;
+					}
+					.shuop-n{
+						display: block;
+						width: 21px;
+						height: 21px;
+						line-height: 21px;
+						margin: 9px 0 0 8px;
+						text-align: center;
+						color: #fff;
+						background: #ff6a00;
+						border-radius: 50%;
+						margin-top: 95px;
+					}
+				}
+			}
+			.Collection{
+				background: url(../images/ibar_sprites.png) no-repeat 0px -72px;
+			}
+			.Lately{
+				background: url(../images/ibar_sprites.png) no-repeat 0px -108px;
+			}
+			.f_iphone{
+				background: url(../images/ibar_sprites.png) no-repeat 0px -144px;
+			}
+			.Customer_service{
+				background: url(../images/ibar_sprites.png) no-repeat 0px -180px;
+			}
+		}
+		.fix-down{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 36px;
+			z-index: 3;
+			.f-ewm{
+				background: url(../images/ibar_sprites.png) no-repeat 0px -216px;
+			}
+			.feedback{
+				background: url(../images/ibar_sprites.png) no-repeat 0px -362px;
+			}
+			.f-top{
+				background: url(../images/ibar_sprites.png) no-repeat 0px -252px;
 			}
 		}
 	}
