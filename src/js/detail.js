@@ -67,7 +67,7 @@ var arr=[
 	},
 		{
 		id:6,
-		img:'../images/l_6.jpg',
+		img:'../images/love_6.jpg',
 		price:'￥179',
 		title:'鲜花/忘情巴黎-33枝红玫瑰',
 		language:'你的轻柔像阵微风，让我从容不迫，想让你知道，我对你始终一往情深。',
@@ -197,7 +197,6 @@ var arr=[
         <div class="product_l">
             <div class="large_img">
                 <img src="${myGoods.img}" class="pt_active">
-                <img src="${myGoods.img}" style="position: absolute; top: 0; left: 0">
                 <div class="btn_left"><span> < </span></div>
                 <div class="btn_right"><span> > </span></div>
             </div>
@@ -281,3 +280,15 @@ function  skip() {
     localStorage.setItem("goods",myId);
     window.location.href='./cart.html';
 }
+
+
+// 选项卡
+$(function(){
+	$('.product_small_img p').mouseover(function(){
+	$('.product_small_img p').removeClass('active').eq($(this).index()).addClass('active');
+
+	$('.large_img img').eq($(this).index()).show();
+	});
+});
+
+

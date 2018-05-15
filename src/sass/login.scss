@@ -17,7 +17,7 @@ main{
             height: 368px;
             width: 380px;
             position: absolute;
-            right: 0;
+            right: 60px;
             bottom: 40px;
             background: #fff;
             padding: 20px;
@@ -41,7 +41,7 @@ main{
                     } 
                 }
                 .box{
-                    margin: 0 30px;
+                    margin: 0 23px;
                 }
                 .link{
                     margin-top: 20px;
@@ -101,6 +101,7 @@ main{
                     }
                     input{
                         height: 100%;
+                        width: 268px;
                         float: left;
                         border: 0;
                         padding-left: 10px;
