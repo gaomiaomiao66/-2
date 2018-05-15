@@ -1,15 +1,9 @@
 @import 'common';
-body{
-    overflow-X: hidden;
-}
-main{
-    background: url('../images/login_bg.jpg') 50% 0;
-    position: relative;
-    left: 50%;
-    top: 0;
-    margin-left: -960px;
-    .main{
-        height: 488px;
+.main_bg{
+    width: 100%;
+    background: url('../images/entry_bg.jpg')10%;
+    .main_1{
+        height: 600px;
         width: 990px;
         margin:0 auto;
         position: relative;

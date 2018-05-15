@@ -185,99 +185,107 @@ var arr=[
 
 ];
 
- var myId=localStorage.getItem("goods");
+ var goodsId=localStorage.getItem("goods");
+ var goodsNum=localStorage.getItem("num");
  var myGoods='';
  for(var i=0;i<arr.length;i++){
      if(arr[i].id==myId){
          myGoods= arr[i]
      }
  }
+if(goodsId){
+	$('.cart').css('display','none');
+}else{
+	$('.cart').css('display','none');
+}
 
- var strDom=`<div class="section_product">
-        <div class="product_l">
-            <div class="large_img">
-                <img src="${myGoods.img}" class="pt_active">
-                <img src="${myGoods.img}" style="position: absolute; top: 0; left: 0">
-                <div class="btn_left"><span> < </span></div>
-                <div class="btn_right"><span> > </span></div>
+var strDom='';
+function priceSum(){
+	// 判断价格的小数点
+	if(myGoodsPrice.toString().indexOf(".")>-1){
+        myGoodsPrice=myGoodsPrice.toString().substring(0,myGoodsPrice.toString().indexOf(".")+2)
+    }
+    strDom +=`    
+            <div class="cart_head">
+                <ul class="order_title">
+                    <li class="selecter"></li>
+                    <li class="product">商品名称</li>
+                    <li class="market_price">市场价</li>
+                    <li class="order_price">订购价</li>
+                    <li class="num">数量</li>
+                    <li class="operate">操作</li>
+                </ul>
             </div>
-            <div class="product_small_img">
-                <p class="active"><img src="${myGoods.img_small.src1}"></p>
-                <p><img src="${myGoods.img_small.src2}"></p>
-                <p><img src="${myGoods.img_small.src3}"></p>
-                <p><img src="${myGoods.img_small.src4}"></p>
-            </div>
-        </div>
-        <div class="product_r">
-            <h3>阳光心情<span>-----</span>10枝多头百合</h3>
-            <div class="attribute">
-                <dl>
-                    <dt>类别：</dt>
-                    <dd>鲜花编号：9010811</dd>
-                </dl>
-                <dl>
-                    <dt>材料：</dt>
-                    <dd>10枝多头黄百合,黄莺适量搭配</dd>
-                </dl>
-                <dl>
-                    <dt>包装：</dt>
-                    <dd>蓝色平面纸圆形包装，拉菲草束扎</dd>
-                </dl>
-                <dl>
-                    <dt>花语：</dt>
-                    <dd>${myGoods.language}</dd>
-                </dl>
-                <dl>
-                    <dt>附送：</dt>
-                    <dd>下单填写留言，即免费赠送精美贺卡！</dd>
-                </dl>
-                <dl>
-                    <dt>配送</dt>
-                    <dd>全国大中城市</dd>
-                </dl>
-                <dl>
-                    <dt style="line-height: 25px;">配送至</dt>
-                    <dd style="line-height: 25px;">鲜花编号：9010811</dd>
-                </dl>
-                <dl>
-                    <dt>说明：</dt>
-                    <dd><span class="text_explain">特别花材,大城市请提前一天订购,中小城市请订购前咨询</span></dd>
-                </dl>
-            </div>
-            <div class="product_price">
-                <div class="price_original">市场价：${(myGoods.price)+50}</div>
-                <div class="price_sell">花礼价：<strong><span class="price_num_A">${myGoods.price}</span></strong></div>
-            </div>
-            <div class="product_appzx">
-                <ul>
-                    <li>促销信息 ：<img src="../images/appzx_01.png"><strong><span class="price_sign_A">¥</span><span class="price_num_A">339</span></strong></li>
-                    <li class="hidden">
-                        <p><span class="app_dropdown"></span>去APP购买<img src="../images/xxjt.png" class="app_img"></p>
-                        <div class="app_ewm">
-                            <img src="../images/app_qrcode.jpg" style="width: 120px; height: 120px;" class="ewm_app_dis">
-                            新人专享100元大礼包
+            <div class="cart_body">
+                <ul class="body_list">
+                    <li class="selecter">
+                        <span class="i_btn"></span>
+                    </li>
+                    <li class="img_box"><a href="javascript:;""><img src="${myGoods.img}"></a></li>
+                    <li class="product">
+                        <a href="javascript:;">
+                            <span class="product_title">[鲜花]一往情深一精品玫瑰礼盒:19枝红玫瑰，勿忘我适量</span>
+                            <span class="feature"></span>
+                        </a>
+                    </li>
+                    <li class="market_price">
+                       <span class="price_num">${(myGoods.price)+50}</span>
+                    </li>
+                    <li class="order_price">
+                        <span class="price_num">${myGoods.price}</span>
+                    </li>
+                    <li class="num">
+                        <div class="input_num">
+                            <a href="javascript:;" class="btn btn_default no"><i class="ico ico_minus" onclick="redunce()"></i></a>
+                            <input type="text" class="form_control input-sm" name="cpsl" value="1" maxlength="3">
+                            <a href="javascript:" class="btn btn_default"><i class="ico ico_add" onclick="add()"></i></a>
                         </div>
                     </li>
-                    <li class="hidden">
-                        <p><span class="app_dropdown"></span>去微信购买<img src="src/images/detail/xxjt.png" class="app_img"></p>
-                        <div class="app_ewm">
-                            <img src="../images/app_qrcode.jpg" style="width: 120px; height: 120px;" class="ewm_app_dis">
-                            新人专享100元大礼包
-                        </div>
+                    <li class="operate">
+                        <a href="javascript:;" class="delBtn" onclick="del()">删除</a><br><a href="javascript:;" class="collectBtn">移到我的收藏</a>
                     </li>
                 </ul>
             </div>
-            <div class="btn_buy">
-                <a href="javascript:;" class="im_buy"  onclick="skip()"><span class="im"></span>立即购买</a>
-                <a href="javascript:;" class="future_buy"><span class="future"></span>收 藏</a>
-            </div>
         </div>
-    </div>`
-
-$('.section_cont').append(strDom);
-var obj={};
-obj.goods=myId;
-function  skip() {
-    localStorage.setItem("goods",myId);
-    window.location.href='./cart.html';
+        <div class="Choice">
+            <div class="Choice_left">
+                <span class="go"></span>
+                <a href="./index.html" class="Continue">继续挑选</a>
+                <div class="money">应付金额：
+                   <span class="money_num">${myGoodsPrice}</span>
+                </div>
+            </div>
+            <button class="Choice_right">去结算</button>`
+        $(".panel_add").append(strDom);
+};
+contantDom();
+$(".form_control").val(goodsNum);
+var a=$(".form_control").val();
+function add(){
+    $(".panel_add").empty();
+    a++;
+    $(".form_control").val(a);
+    myGoodsPrice=a*myGoods.price.substring(1);
+    contantDom();
+    $(".form_control").val(a);
 }
+function redunce(){
+    if(a<=1){
+        alert("别点了，还买不买了！")
+    }else{
+        $(".panel_add").empty();
+        a--;
+        $(".form_control").val(a);
+        myGoodsPrice=a*myGoods.price.substring(1);
+        contantDom();
+        $(".form_control").val(a);
+    }
+}
+function del(){
+    $(".panel_add").empty();
+    $(".panel_add").css("display","none");
+    $(".cart").css("display","block");
+    localStorage.removeItem("goods");
+    localStorage.removeItem("num");
+}
+
