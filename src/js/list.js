@@ -3,84 +3,110 @@ var arr=[
 		id:1,
 		img:'../images/l_1.jpg',
 		price:'￥358',
-		title:'鲜花/忘情巴黎-33枝红玫瑰'
+		title:'鲜花/忘情巴黎-33枝红玫瑰',
+		language:'你的轻柔像阵微风，让我从容不迫，想让你知道，我对你始终一往情深。'
+
 	},
 		{
 		id:2,
 		img:'../images/l_2.jpg',
 		price:'￥569',
-		title:'鲜花/忘情巴黎-33枝红玫瑰'
+		title:'鲜花/忘情巴黎-33枝红玫瑰',
+		language:'你的轻柔像阵微风，让我从容不迫，想让你知道，我对你始终一往情深。'
 	},
 		{
 		id:3,
 		img:'../images/l_3.jpg',
 		price:'￥199',
-		title:'鲜花/忘情巴黎-33枝红玫瑰'
+		title:'鲜花/忘情巴黎-33枝红玫瑰',
+		language:'你的轻柔像阵微风，让我从容不迫，想让你知道，我对你始终一往情深。'
+
 	},
 		{
 		id:4,
 		img:'../images/l_4.jpg',
 		price:'￥139',
-		title:'鲜花/忘情巴黎-33枝红玫瑰'
+		title:'鲜花/忘情巴黎-33枝红玫瑰',
+		language:'你的轻柔像阵微风，让我从容不迫，想让你知道，我对你始终一往情深。'
+	
 	},
 		{
 		id:5,
 		img:'../images/l_5.jpg',
 		price:'￥245',
-		title:'鲜花/忘情巴黎-33枝红玫瑰'
+		title:'鲜花/忘情巴黎-33枝红玫瑰',
+		language:'你的轻柔像阵微风，让我从容不迫，想让你知道，我对你始终一往情深。'
+		
 	},
 		{
 		id:6,
 		img:'../images/l_6.jpg',
 		price:'￥179',
-		title:'鲜花/忘情巴黎-33枝红玫瑰'
-	},
+		title:'鲜花/忘情巴黎-33枝红玫瑰',
+		language:'你的轻柔像阵微风，让我从容不迫，想让你知道，我对你始终一往情深。'
+	},	
 		{
 		id:7,
 		img:'../images/love_7.jpg',
 		price:'￥206',
-		title:'鲜花/忘情巴黎-33枝红玫瑰'
+		title:'鲜花/忘情巴黎-33枝红玫瑰',
+		language:'你的轻柔像阵微风，让我从容不迫，想让你知道，我对你始终一往情深。'
+		
 	},
 		{
 		id:8,
 		img:'../images/love_8.jpg',
 		price:'￥298',
-		title:'鲜花/忘情巴黎-33枝红玫瑰'
+		title:'鲜花/忘情巴黎-33枝红玫瑰',
+		language:'你的轻柔像阵微风，让我从容不迫，想让你知道，我对你始终一往情深。'
+	
 	},
 		{
 		id:9,
 		img:'../images/love_9.jpg',
 		price:'￥599',
-		title:'鲜花/忘情巴黎-33枝红玫瑰'
+		title:'鲜花/忘情巴黎-33枝红玫瑰',
+		language:'你的轻柔像阵微风，让我从容不迫，想让你知道，我对你始终一往情深。'
+		
 	},
 		{
 		id:10,
 		img:'../images/love_10.jpg',
 		price:'￥139',
-		title:'鲜花/忘情巴黎-33枝红玫瑰'
+		title:'鲜花/忘情巴黎-33枝红玫瑰',
+		language:'你的轻柔像阵微风，让我从容不迫，想让你知道，我对你始终一往情深。'
+		
 	},
 		{
 		id:11,
 		img:'../images/love_11.jpg',
 		price:'￥308',
-		title:'鲜花/忘情巴黎-33枝红玫瑰'
+		title:'鲜花/忘情巴黎-33枝红玫瑰',
+		language:'你的轻柔像阵微风，让我从容不迫，想让你知道，我对你始终一往情深。'
+		
 	},
 		{
 		id:12,
 		img:'../images/love_12.jpg',
 		price:'￥569',
-		title:'鲜花/忘情巴黎-33枝红玫瑰'
+		title:'鲜花/忘情巴黎-33枝红玫瑰',
+		language:'你的轻柔像阵微风，让我从容不迫，想让你知道，我对你始终一往情深。'
+		
 	},
 		{
 		id:13,
 		img:'../images/love_14.jpg',
 		price:'￥236',
-		title:'鲜花/忘情巴黎-33枝红玫瑰'
+		title:'鲜花/忘情巴黎-33枝红玫瑰',
+		language:'你的轻柔像阵微风，让我从容不迫，想让你知道，我对你始终一往情深。'
+		
 	},	{
 		id:14,
 		img:'../images/love_15.jpg',
 		price:'￥368',
-		title:'鲜花/忘情巴黎-33枝红玫瑰'
+		title:'鲜花/忘情巴黎-33枝红玫瑰',
+		language:'你的轻柔像阵微风，让我从容不迫，想让你知道，我对你始终一往情深。'
+		
 	}
 
 ];
@@ -101,10 +127,10 @@ for(var i=0; i<arr.length;i++){
     </li>`
   }
 $(".list").append(strDom);
-// function  localNum(id) {
-//     localStorage.setItem("goods",id);
-//     window.location.href='../html/detail.html';
-// }
+function  localNum(id) {
+    localStorage.setItem("goods",id);
+    window.location.href='./detail.html';
+}
 
 
 // 分页符

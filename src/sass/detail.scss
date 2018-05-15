@@ -294,3 +294,241 @@
         }
     }
 }
+
+// 鲜花介绍右边的内容
+.section_two{
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+    .section_two_left{
+        width: 210px;
+        margin-right: 15px;
+        float: left;
+    }
+    .left_two{
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        width: 210px;
+        margin-bottom: 20px;
+        .two_hd{
+            padding: 8px 0;
+            background: #ffe8d9;
+            border-bottom: #ebebeb;
+            h3{
+                font-size: 14px;
+                color: #737373;
+                text-align: center;
+            }
+        }
+        .two_cont{
+            padding: 10px 9px;
+        }
+    }
+    .left_three{
+        .sent_cont{
+            padding: 10px 0;
+            overflow: hidden;
+            .sent_img{
+                display: inline-block;
+                border: 1px solid #ccc;
+                float: left;
+                img{
+                    width: 50px;
+                    height: 56px;
+                }
+            }
+            .sent_right{
+                font-size: 12px;
+                color: #737373;
+                float: left;
+                margin-left: 10px;
+                h5{
+                    font-weight: normal;
+                    padding: 4px 0 8px;
+                }
+                a{
+                    &:hover{
+                        color: #ff6a00;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .section_two_right{
+        width: 970px;
+        float: left;
+        .hd_move{
+            width: 100%;
+            height: 34px;
+            border-left: 1px solid #dbdbdb;
+            border-bottom: 1px solid #333;
+            .table_jump{
+                display: inline-block;
+                font-size: 14px;
+                line-height: 35px;
+                color: #737373;
+                border: 1px solid #dbdbdb;
+                border-bottom: none;
+                margin-bottom: -1px;
+                margin-left: -1px;
+                a{
+                    display: inline-block;
+                    padding: 0 25px;
+                }
+            }
+            .jump_A{
+                border-top-color: #333;
+               a{
+                  line-height: 35px;
+                  background: #fff;
+               }
+            }
+        }
+        .section_hd_img{
+            box-sizing: border-box;
+            width: 100%;
+            border: 1px solid #dbdbdb;
+            border-top: none;
+            padding: 20px;
+            margin-bottom: 25px;
+            .img_it{
+                margin: 0 auto;
+            }
+            .img_it3{
+                margin-bottom: 15px;
+            }
+        }
+        .body_com_hd{
+            font-size: 12px;
+            color: #737373;
+            text-align: center;
+            span{
+                color: rgb(255, 0, 0);
+            }
+        }
+        .body_list{
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 2px dotted #d9d9d9;
+            &::after{
+                content: "";
+                display: block;
+                height: 0;
+                clear: both;
+                overflow: hidden;
+                visibility: hidden;
+            }
+            .body_list_left{
+                font-size: 12px;
+                color: #737373;
+                float: left;
+                .body_img{
+                    margin-bottom: 6px;
+                    border: 1px solid #d9d9d9;
+                }
+            }
+            .body_list_right{
+                margin-left: 150px;
+                font-size: 12px;
+                color: #737373;
+                .score_date{
+                    padding-bottom: 8px;
+                    border-bottom: 1px solid #d9d9d9;
+                    margin-bottom: 8px;
+                    img{
+                        display: inline-block;
+                    }
+                    span{
+                        float: right;
+                    }
+                }
+                .score_cont{
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .body_foot{
+            font-size: 12px;
+            color: #737373;
+            text-align: center;
+            margin-bottom: 10px;
+            span{
+                color: rgb(255, 0, 0);
+            }
+            a{
+                color: #ff6a00;
+            }
+        }
+        .shop_guarantee{
+            .guarantee_list{
+                text-align: center;
+                margin-top: 10px;
+                li{
+                    display: inline-block;
+                    font-size: 14px;
+                    a{
+                        font-size: 12px;
+                        display: block;
+                        width: 130px;
+                        margin: 0 10px;
+                        text-align: center;
+                    }
+                    .guarantee{
+                        display: block;
+                        margin: 0 auto 10px;
+                        width: 60px;
+                        height: 60px;
+                    }
+                    .shopper_A{
+                        background: url(../images/server_z.png) no-repeat;
+                    }
+                    .shopper_B{
+                        background: url(../images/server_z.png) no-repeat -60px 0;
+                    }
+                    .shopper_C{
+                        background: url(../images/server_z.png) no-repeat -120px 0;
+                    }
+                    .shopper_D{
+                        background: url(../images/server_z.png) no-repeat -180px 0;
+                    }
+                    .shopper_E{
+                        background: url(../images/server_z.png) no-repeat -240px 0;
+                    }
+                    .shopper_F{
+                        background: url(../images/server_z.png) no-repeat -300px 0;
+                    }
+                }
+                .guarantee_active{
+                    a{
+                        color: #ff6a00;
+                        .guarantee{
+                            background-position-y: -60px;
+                        }
+                    }
+                }
+            }
+            .img_Carousel{
+                margin: 30px 0 20px;
+                position: relative;
+                img{
+                    vertical-align: bottom;
+                    margin: 0 auto;
+                }
+                .back_move{
+                    position: absolute;
+                    top: 0;
+                    left: 9px;
+                    opacity: 0;
+                    filter: alpha(opacity=0);
+                    transition: all 1s;
+                }
+                .back_opacity{
+                    opacity: 1;
+                    filter: alpha(opacity=100);
+                }
+            }
+        }
+    }
+}
