@@ -277,3 +277,7 @@ function del(){
     localStorage.removeItem("num");
 }
 
+
+$('.Choice_right').click(function(){
+	$(window).attr('location', '../../src/html/order.html');
+})

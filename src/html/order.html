@@ -4,11 +4,12 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>购物车</title>
+    <title>订单页</title>
     <link rel="SHORTCUT ICON" href="../images/small.png">
     <link rel="stylesheet" href="../../dist/css/index.css">
 </head>
 <body>
+	<!-- header nav -->
 	<nav class="site-nav">
         <div class="nav-content">
             <ul class="site-nav-l">
@@ -110,73 +111,212 @@
             </div>
         </div>
     </header>
-    <!-- 购物车中间内容 -->
-     <div class="cart_panel">
-        <div class="cart">
-            <div class="cart_big">
-                <div class="car_em">
-                    <img src="../images/cart_e.jpg" alt="">
-                </div>
-                <div class="cue">
-                    <a href="./index.html">去逛逛<b> > </b></a>
-                </div>
-            </div>
-        </div>
-        <div class="panel_add">
-            <div class="cart_head">
-                <ul class="order_title">
-                    <li class="selecter"></li>
-                    <li class="product">商品名称</li>
-                    <li class="market_price">市场价</li>
-                    <li class="order_price">订购价</li>
-                    <li class="num">数量</li>
-                    <li class="operate">操作</li>
-                </ul>
-            </div>
-            <div class="cart_body" id="info">
-                <!-- <ul class="body_list">
-                    <li class="selecter">
-                        <span class="i_btn"></span>
-                    </li>
-                    <li class="img_box"><a href="javascript:;""><img src="../images/9010966.jpg_80x87.jpg"></a></li>
-                    <li class="product">
-                        <a href="javascript:;">
-                            <span class="product_title">[鲜花]一往情深一精品玫瑰礼盒:19枝红玫瑰，勿忘我适量</span>
-                            <span class="feature"></span>
-                        </a>
-                    </li>
-                    <li class="market_price">
-                        <span class="price_sign">¥</span><span class="price_num">315</span>
-                    </li>
-                    <li class="order_price">
-                        <span class="price_sign">¥</span><span class="price_num">235</span>
-                    </li>
-                    <li class="num">
-                        <div class="input_num">
-                            <a href="javascript:;" class="btn btn_default no"><i class="ico ico_minus"></i></a>
-                            <input type="text" class="form_control input-sm" name="cpsl" value="1" maxlength="3">
-                            <a href="javascript:" class="btn btn_default"><i class="ico ico_add"></i></a>
-                        </div>
-                    </li>
-                    <li class="operate">
-                        <a href="javascript:;" class="delBtn">删除</a><br><a href="javascript:;" class="collectBtn">移到我的收藏</a>
-                    </li>
-                </ul> -->
-            </div>
-        </div>
-        <!-- <div class="Choice">
-            <div class="Choice_left">
-                <span class="go"></span>
-                <a href="./index.html" class="Continue">继续挑选</a>
-                <div class="money">应付金额：
-                    <span class="money_style">¥</span><span class="money_num">0</span>
-                </div>
-            </div>
-            <button class="Choice_right">去结算</button>
-        </div> -->
-    </div>
-   <!-- 尾部导航 -->
-        <div class="footer-nav">
+
+<!-- 信息填写 -->
+<div class='content-wrap'>
+			<div class='content1'>
+				<div class='content2'>
+					<div class='content2-1'>收货信息</div>
+					<div class='content2-2'>
+						<div class='content2-2-1'>
+							<ul class='content21'>
+								<li>
+									<label>收货人姓名:</label>
+									<input type="text" style="width: 100px;"/>
+								</li>
+								<li id="sjld" style="width:100%;position:relative;margin-top:5px;">
+									<label style="float:left">收货人地址:</label>
+									<div class="m_zlxg" id="shenfen" style="margin-left:3px">
+										<p title="">选择省份</p>
+										<div class="m_zlxg2">
+											<ul></ul>
+										</div>
+									</div>
+									<div class="m_zlxg" id="chengshi">
+										<p title="">选择城市</p>
+										<div class="m_zlxg2">
+											<ul></ul>
+										</div>				
+									</div>	
+									<div class="m_zlxg" id="quyu">	
+										<p title="">选择区域</p>
+										<div class="m_zlxg2">
+											<ul></ul>
+										</div>
+									</div>					
+									<input id="sfdq_num" type="hidden" value="" />		
+									<input id="csdq_num" type="hidden" value="" />		
+									<input id="sfdq_tj" type="hidden" value="" />		
+									<input id="csdq_tj" type="hidden" value="" />
+									<input id="qydq_tj" type="hidden" value="" />
+								</li>
+								<li>
+									<label>详细的地址:</label>
+									<input type="text" style="width:250px"/>
+								</li>
+								<li>
+									<label>手机的号码</label>
+									<input type="text" style="width:100px" />
+								</li>
+								<li>
+									<input type="button" class='content22' value='添加并保存'/>
+									<input type="button" class='content23' value="取消">
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class='content3'>
+					<div class='content3-1'>送货时间</div>
+					<ul>
+						<li>
+							<input type="radio"/>
+							只工作日送货
+						</li>
+						<li>
+							<input type="radio"/>
+							随时送货
+						</li>
+						<li>
+							<input type="radio"/>
+							双休日、假期送货（工作日不送货）
+						</li>
+					</ul>		
+				</div>
+				<div class='content4'>
+					<div class='content4-1'>支付方式</div>
+					<ul>
+						<li>
+							<span class='content4-1-1'><img src="../images/66.png"/></span>
+							<a href="#" style="float: right;color: #d00000;margin-left: 20px;">
+								<span>修改支付及配送方式</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class='content5'>
+					<div class='content5-1'>
+						<span class='content5-1-1'>商品清单</span>
+						<span class='content5-1-2'><a href="shoppingcar.html">返回修改购物车</a></span>
+					</div>
+					<div class='content5-2'>
+						<div class='content5-2-1'>
+							<div class='content51'>
+								<div class='content52'>
+									<div class='left'>
+										<h3>配送方式</h3>
+										<div class='left1'>
+											<ul>
+												<li class='le'>
+													<span>普通快递</span>
+												</li>
+												<li style="border:0" class='le2'>
+													<span>专柜自提</span>
+													<a href="#">
+														<div class='le3'></div>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class='right'>
+										<h3>此订单由果酷网为您服务</h3>
+										<div class='right1'>
+											<table>
+												<tbody>
+													<tr>
+														<td class='right2'>
+															<a href="#"><img src="../images/l_1.jpg"/></a>
+														</td>
+														<td class='right3'>
+															<a href="#" style="margin-left:10px;">超级果盒：明星主打</a>
+														</td>
+														<td class='right4'>
+															<span style="margin-left:20px;">规格：500g<br/>盒</span>
+														</td>
+														<td><span style='margin-left:20px;'">×1</span></td>
+														<td><span style='margin-left:80px;'">￥125</span></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='content5-2-2'>
+							<ul>
+								<li>运送的方式:</li>
+								<li>使用优惠券：
+									<select>
+										<option>不用优惠券</option>
+										<option>新人注册20</option>
+										<option>新人注册60</option>
+									</select>
+									<span>兑换优惠劵 >></span>
+								</li>
+								<li>
+									<div>
+										<span>-</span>
+										使用礼品卡:
+										<a href="#">查看可用礼品卡 >></a>
+									</div>
+								</li>
+								<li>
+									<div>
+										<span>+</span>
+										余额支付:您的可用余额为
+										<a href="#">￥0.00</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class='content5-2-3'>
+							<ul>
+								<li>
+									<p class='con'>商品金额小计：</p>
+									<div class='con1'>
+										<span>￥125</span>
+									</div>
+								</li>
+								<li>
+									<p class='con'>运费:</p>
+									<div class='con1'>
+										<span>+￥10</span>
+									</div>
+								</li>
+								<li>
+									<p class='con'>应付金额</p>
+									<div class='con1'>
+										<span style="font-size:20px;color:red">￥135</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class='content6'>
+					<div class='content6-1'>
+						<div class='content6-11'>
+							<span>+</span> 订单备注：
+						</div>
+						<div class='content6-11' style="margin-top:20px;">
+							<span>+</span> 开发票：
+						</div>
+					</div>
+				</div>
+				<div class='content7'>
+					<input type="button" value='提交订单' />
+					<div class='content7-1'>
+						<span>应付金额：</span>
+						<span style="font-size: 20px;color: #d00000;margin-right:20px;">￥35</span>
+    
+					</div>
+				</div>
+			</div>
+		</div>
+
+       <div class="footer-nav">
             <div class="footer-nav-cont">
                 <ul class="nav-cont-list">
                     <li><a href="./index.html">首页</a></li>
@@ -239,4 +379,18 @@
 </html>
  <script src="../../dist/js/jquery-1.10.1.min.js"></script>
 <script src="../../dist/js/common.js"></script>
-<script src="../../dist/js/cart.js"></script>
+<script src="../../dist/js/order.js"></script>
+<script>
+	//省级联动
+		$("#sjld").sjld("#shenfen","#chengshi","#quyu");
+
+		//点击换边框
+		$('.le2').click(function(){
+			$('.le2').css('border','1px solid red');
+			$('.le').css('border','0');
+		})
+		$('.le').click(function(){
+			$('.le').css('border','1px solid red');
+			$('.le2').css('border','0');
+		})
+</script>
