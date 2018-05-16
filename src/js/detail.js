@@ -244,7 +244,7 @@ var arr=[
                 </dl>
             </div>
             <div class="product_price">
-                <div class="price_original">市场价：${(myGoods.price)+50}</div>
+                <div class="price_original">市场价：${(myGoods.price + 50)}</div>
                 <div class="price_sell">花礼价：<strong><span class="price_num_A">${myGoods.price}</span></strong></div>
             </div>
             <div class="product_appzx">

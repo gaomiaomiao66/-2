@@ -116,3 +116,35 @@ $(function(){
         
     });
 });
+
+
+// 左侧商品的显示隐藏
+
+$('.cate-ysh').mouseover(function(){
+    $('.right-menu-f').css('display','block');
+});
+$('.cate-cake').mouseout(function(){
+    $('.right-menu-f').css('display','none');
+})
+
+// 蛋糕
+$('.transcate_m').mouseover(function(){
+    $('.right-menu-m').css('display','block');
+});
+$('.cate-cake').mouseout(function(){
+    $('.right-menu-m').css('display','none');
+})
+
+// 礼品，公仔
+$('.cate_letter').mouseover(function(){
+    $('.right-menu-e').css('display','block');
+});
+$('.cate_letter').mouseout(function(){
+    $('.right-menu-e').css('display','none');
+})
+
+
+// 回到顶部
+$('.f-top').click(function(){
+    $('html').animate({scrollTop:0},300);
+})

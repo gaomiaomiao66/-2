@@ -189,56 +189,45 @@ var arr=[
  var goodsNum=localStorage.getItem("num");
  var myGoods='';
  for(var i=0;i<arr.length;i++){
-     if(arr[i].id==myId){
+     if(arr[i].id==goodsId){
          myGoods= arr[i]
      }
  }
 if(goodsId){
 	$('.cart').css('display','none');
 }else{
-	$('.cart').css('display','none');
+	$('.cart').css('display','block');
 }
-
+var myGoodsPrice=goodsNum*myGoods.price.substring(1);
 var strDom='';
 function priceSum(){
 	// 判断价格的小数点
 	if(myGoodsPrice.toString().indexOf(".")>-1){
-        myGoodsPrice=myGoodsPrice.toString().substring(0,myGoodsPrice.toString().indexOf(".")+2)
+        myGoodsPrice=myGoodsPrice.toString().silce(0,myGoodsPrice.toString().indexOf(".")+2)
     }
-    strDom +=`    
-            <div class="cart_head">
-                <ul class="order_title">
-                    <li class="selecter"></li>
-                    <li class="product">商品名称</li>
-                    <li class="market_price">市场价</li>
-                    <li class="order_price">订购价</li>
-                    <li class="num">数量</li>
-                    <li class="operate">操作</li>
-                </ul>
-            </div>
-            <div class="cart_body">
+    strDom +=`
                 <ul class="body_list">
                     <li class="selecter">
-                        <span class="i_btn"></span>
+                        <input type="checkbox">
                     </li>
                     <li class="img_box"><a href="javascript:;""><img src="${myGoods.img}"></a></li>
                     <li class="product">
                         <a href="javascript:;">
-                            <span class="product_title">[鲜花]一往情深一精品玫瑰礼盒:19枝红玫瑰，勿忘我适量</span>
+                            <span class="product_title">${myGoods.title}</span>
                             <span class="feature"></span>
                         </a>
                     </li>
                     <li class="market_price">
-                       <span class="price_num">${(myGoods.price)+50}</span>
+                       <span class="price_num">${myGoods.price + 50}</span>
                     </li>
                     <li class="order_price">
                         <span class="price_num">${myGoods.price}</span>
                     </li>
                     <li class="num">
                         <div class="input_num">
-                            <a href="javascript:;" class="btn btn_default no"><i class="ico ico_minus" onclick="redunce()"></i></a>
-                            <input type="text" class="form_control input-sm" name="cpsl" value="1" maxlength="3">
-                            <a href="javascript:" class="btn btn_default"><i class="ico ico_add" onclick="add()"></i></a>
+                            <a href="javascript:;" class="btn btn_default no" onclick="redunce()"><i class="ico ico_minus" ></i></a>
+                            <input type="text" class="form_control input-sm" name="cpsl" value="1" maxlength="3" id="myNum">
+                            <a href="javascript:" class="btn btn_default yes" onclick="add()"><i class="ico ico_add" ></i></a>
                         </div>
                     </li>
                     <li class="operate">
@@ -246,7 +235,6 @@ function priceSum(){
                     </li>
                 </ul>
             </div>
-        </div>
         <div class="Choice">
             <div class="Choice_left">
                 <span class="go"></span>
@@ -256,34 +244,34 @@ function priceSum(){
                 </div>
             </div>
             <button class="Choice_right">去结算</button>`
-        $(".panel_add").append(strDom);
+        $("#info").append(strDom);
 };
-contantDom();
-$(".form_control").val(goodsNum);
-var a=$(".form_control").val();
+priceSum();
+$("#myNum").val(goodsNum);
+var a=$("#myNum").val();
 function add(){
-    $(".panel_add").empty();
+    $("#info").empty();
     a++;
-    $(".form_control").val(a);
+    $("#myNum").val(a);
     myGoodsPrice=a*myGoods.price.substring(1);
     contantDom();
-    $(".form_control").val(a);
+    $("#myNum").val(a);
 }
 function redunce(){
     if(a<=1){
         alert("别点了，还买不买了！")
     }else{
-        $(".panel_add").empty();
+        $("#info").empty();
         a--;
-        $(".form_control").val(a);
+        $("#myNum").val(a);
         myGoodsPrice=a*myGoods.price.substring(1);
         contantDom();
-        $(".form_control").val(a);
+        $("#myNum").val(a);
     }
 }
 function del(){
-    $(".panel_add").empty();
-    $(".panel_add").css("display","none");
+    $("#info").empty();
+    $(".cart_head").css("display","none");
     $(".cart").css("display","block");
     localStorage.removeItem("goods");
     localStorage.removeItem("num");

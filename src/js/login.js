@@ -27,3 +27,17 @@
         }
     }
 
+$(".last a").click(function(){
+    if($("#span1").html()=='√'&&$("#span3").html()=='√'&&$("#span2").html()=='√'&&$("#span4").html()=='√'){
+        window.location.href='login.html';
+        return false;
+    }else{
+        if($("#span1").html()=='×'){
+            alert("账号错了");
+        }else if($("#span2").html()=='×'){
+			alert("密码输入有误")
+		}else{
+			window.location.href='index.html';
+		}
+    }
+});
